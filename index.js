@@ -6,18 +6,18 @@ var mkdirp = require('mkdirp');
 var moment = require('moment');
 var Dropbox = require('dropbox');
 var dbx = new Dropbox({ accessToken: process.argv[2] || 'YOUR_ACCESS_TOKEN_HERE' });
-var baseLocation = '~/Desktop/';
+var baseLocation = '~/'; // users home folder
 var topLevelFolder = 'rpi_cam2dropbox';
 var baseFolder = baseLocation + topLevelFolder;
-var folderName = moment().utc().format('YYYY-MM-DD_dddd');
+var folderName = moment().utc().format('YYYY-MM-DD');
 var outputPath = baseFolder + '/' + folderName + '/';
 var options = {
   mode: 'timelapse',
   timelapse: 10000, // value in ms
-  output: path.normalize(outputPath) + '%Y-%m-%d\T%H:%i:%s%O.jpg',
+  output: path.normalize(outputPath) + '%Y-%m-%d\T%H.%i.%s%O.jpg',
   width: 1280,
   height: 720,
-  // timeout: 60000000, // ms until camera process exits
+  timeout: 0, // ms until camera process exits
   encoding: 'jpg',
   nopreview: true, // probably not needed
   // ev: -1, // exposure compensation
