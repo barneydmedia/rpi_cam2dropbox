@@ -1,5 +1,5 @@
 #Raspberry Pi - Cam2Dropbox
-This is a simple app that can take photos with a Raspberry Pi camera module and send them to Dropbox using your API key.
+A simple app that can take photos with a Raspberry Pi camera module and send them to Dropbox using your API key.
 
 ##Requirements
 * Node >= v4.x.x

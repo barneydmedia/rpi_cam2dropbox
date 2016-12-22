@@ -1,13 +1,13 @@
 {
   "name": "rpi_cam2dropbox",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple app that can take photos with a Raspberry Pi camera module and send them to Dropbox using your API key.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": "https://github.com/barneydmedia/rpi_cam2dropbox",
+  "author": "Barney Davis",
+  "license": "MIT",
   "dependencies": {
     "async": "^2.1.4",
     "dropbox": "^2.5.0",
